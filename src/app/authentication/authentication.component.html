@@ -1,0 +1,27 @@
+
+      <div style="text-align: center;">
+        
+              
+
+        <div >
+          <form name="form" [formGroup]="form">
+            <div class="form-group ">
+              <label  style="color:rgb(255,255,255);text-shadow: 2px 2px 4px #000000;"><strong>username</strong></label>
+              <input  type="text" class="form-control" id="username">
+              
+            </div>
+            <div class="form-group">
+              <label style="color:rgb(255,255,255);text-shadow: 2px 2px 4px #000000;"><strong>Mot de passe</strong></label>
+              <input type="password" class="form-control" id="pass" >
+              <div *ngIf="form.get('passwordClClient').touched && form.get('passwordClClient').invalid" class="invalid-feedback">
+                <div *ngIf="form.get('passwordClClient').errors">Password is required</div>
+
+            </div>
+            </div>
+            
+            
+            <button (click) ="onLogin()"  type="submit" class="btn btn-primary" style="background-color:rgb(12,83,40);border-color: rgb(12,83,40)">se connecter</button>
+          </form>
+        </div>
+      </div>
+    
